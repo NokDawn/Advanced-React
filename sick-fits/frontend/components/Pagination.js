@@ -37,7 +37,7 @@ export default function Pagination({ page }) {
         Page {page} of {pageCount}
       </p>
       <p>{count} Items total</p>
-      <Link href={`/products/${page + 1}`}>
+      <Link href={`/products/${+page + 1}`}>
         <a aria-disabled={page >= pageCount}>Next</a>
       </Link>
     </PaginationStyles>
