@@ -31,7 +31,7 @@ const CREATE_PRODUCT_MUTATION = gql`
 `;
 
 export default function CreateProduct() {
-  const { inputs, handleChange, clearForm, resetForm } = useForm({
+  const { inputs, handleChange, clearForm } = useForm({
     image: '',
     name: 'Nice Shoes',
     price: 3232,
@@ -52,7 +52,7 @@ export default function CreateProduct() {
         e.preventDefault();
 
         const res = await createProduct();
-        clearForm();
+        clearForm(e);
 
         Router.push({
           pathname: `product/${res.data.createProduct.id}`,
