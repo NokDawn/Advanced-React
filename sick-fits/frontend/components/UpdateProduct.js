@@ -62,7 +62,6 @@ export default function UpdateProduct({ id }) {
             price: inputs.price,
           },
         });
-        console.log({ res });
 
         // const res = await createProduct();
         // clearForm();
